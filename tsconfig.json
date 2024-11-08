@@ -1,16 +1,17 @@
 {
   "extends": "@backstage/cli/config/tsconfig.json",
-  "include": [
-    "packages/*/src"
-    // "backstage-plugin-autogov-common/src",
-    // "backstage-plugin-github-releases-assets-backend/src",
-    // "backstage-plugin-github-releases-autogov/src"
-  ],
+  "include": ["src", "dev"],
   "exclude": ["node_modules"],
   "compilerOptions": {
     "outDir": "dist-types",
     "rootDir": ".",
+    "declaration": true,
+    "declarationDir": "dist-types/",
+    "declarationMap": true,
+    "sourceMap": true,
     "module": "commonjs",
+    "target": "es6",
+    "strict": true,
     "esModuleInterop": true,
     "allowSyntheticDefaultImports": true,
     "skipLibCheck": true

@@ -1,37 +1,76 @@
 {
-  "name": "@liatrio/backstage-plugin-autogov",
+  "name": "@liatrio/backstage-plugin-autogov-common",
   "version": "0.1.0",
+  "main": "./dist/index.esm.js",
+  "types": "./dist/index.d.ts",
+  "license": "Apache-2.0",
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/",
+    "access": "public"
+  },
+  "backstage": {
+    "role": "frontend-plugin",
+    "pluginId": "autogov-common",
+    "pluginPackages": []
+  },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/liatrio/backstage-plugin-autogov.git"
+    "url": "git+https://github.com/liatrio/backstage-plugin-autogov-common.git"
   },
-  "license": "Apache-2.0",
+  "sideEffects": false,
+  "dependencies": {
+    "@backstage/core-components": "^0.15.0",
+    "@backstage/core-plugin-api": "^1.9.4",
+    "@backstage/theme": "^0.5.7",
+    "@material-ui/core": "^4.9.13",
+    "@material-ui/icons": "^4.9.1",
+    "@material-ui/lab": "^4.0.0-alpha.61",
+    "react-dom": "^18.3.1",
+    "react-router-dom": "^6.28.0",
+    "react-use": "^17.2.4"
+  },
+  "peerDependencies": {
+    "react": "^16.13.1 || ^17.0.0 || ^18.0.0"
+  },
   "devDependencies": {
     "@backstage/cli": "^0.27.1",
+    "@backstage/core-app-api": "^1.15.0",
+    "@backstage/dev-utils": "^1.1.0",
+    "@backstage/test-utils": "^1.6.0",
     "@semantic-release/changelog": "^6.0.3",
     "@semantic-release/commit-analyzer": "^10.0.4",
     "@semantic-release/git": "^10.0.1",
     "@semantic-release/github": "^9.2.6",
     "@semantic-release/npm": "^11.0.3",
     "@semantic-release/release-notes-generator": "^12.1.0",
+    "@testing-library/jest-dom": "^6.0.0",
+    "@testing-library/react": "^14.0.0",
+    "@testing-library/user-event": "^14.0.0",
+    "@types/react-dom": "^18",
     "conventional-changelog-conventionalcommits": "^8.0.0",
     "husky": "^9.1.6",
     "lerna": "^8.1.9",
+    "msw": "^1.0.0",
+    "react": "^16.13.1 || ^17.0.0 || ^18.0.0",
     "typescript": "^5.6.3"
   },
   "workspaces": [
     "packages/*"
   ],
   "scripts": {
-    "build": "lerna run tsc:full && lerna run build",
-    "lint": "backstage-cli repo lint",
+    "start": "backstage-cli package start",
+    "build": "backstage-cli package build",
+    "lint": "backstage-cli package lint",
     "lint:all": "yarn lint && yarn prettier:check",
-    "test": "CI=true lerna --scope '@liatrio/*' run test",
+    "test": "backstage-cli package test",
+    "clean": "backstage-cli package clean",
+    "prepack": "backstage-cli package prepack",
+    "postpack": "backstage-cli package postpack",
     "prettier:check": "npx --yes prettier --check .",
     "prettier:fix": "npx --yes prettier --write .",
     "tsc:full": "tsc --skipLibCheck true --incremental false",
-    "prepare": "husky",
-    "clean": "backstage-cli repo clean"
+    "prepare": "husky"
   },
+  "module": "./dist/index.esm.js",
   "packageManager": "yarn@4.4.1"
 }
