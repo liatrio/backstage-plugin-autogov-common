@@ -25,6 +25,7 @@ ignorePaths:
   - package.json
   - stories/
   - node_modules/
+  - .yarn/
 features:
   weighted-suggestions: true
 allowCompoundWords: true
