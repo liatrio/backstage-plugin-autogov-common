@@ -27,7 +27,6 @@
       "@semantic-release/npm",
       {
         "npmPublish": true,
-        "pkgRoot": "packages/backstage-plugin-autogov-common",
         "registry": "https://npm.pkg.github.com/"
       }
     ]

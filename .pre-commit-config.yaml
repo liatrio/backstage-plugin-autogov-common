@@ -25,12 +25,12 @@ repos:
           - "--disable=MD033" # Allow Inline HTML
           - "--disable=MD034" # Allow bare URLs
           - "--ignore=./.github/ISSUE_TEMPLATE" # Ignore issue templates
-  - repo: https://github.com/commitizen-tools/commitizen
-    rev: v3.29.0
-    hooks:
-      - id: commitizen
-      - id: commitizen-branch
-        stages: [pre-push]
+  # - repo: https://github.com/commitizen-tools/commitizen
+  #   rev: v3.29.0
+  #   hooks:
+  #     - id: commitizen
+  #     - id: commitizen-branch
+  #       stages: [pre-push]
   - repo: https://github.com/adrienverge/yamllint
     rev: v1.35.1
     hooks:

@@ -3420,9 +3420,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@liatrio/backstage-plugin-autogov-common@workspace:packages/backstage-plugin-autogov-common":
+"@liatrio/backstage-plugin-autogov-common@workspace:.":
   version: 0.0.0-use.local
-  resolution: "@liatrio/backstage-plugin-autogov-common@workspace:packages/backstage-plugin-autogov-common"
+  resolution: "@liatrio/backstage-plugin-autogov-common@workspace:."
   dependencies:
     "@backstage/cli": "npm:^0.27.1"
     "@backstage/core-app-api": "npm:^1.15.0"
@@ -3434,35 +3434,27 @@ __metadata:
     "@material-ui/core": "npm:^4.9.13"
     "@material-ui/icons": "npm:^4.9.1"
     "@material-ui/lab": "npm:^4.0.0-alpha.61"
-    "@testing-library/jest-dom": "npm:^6.0.0"
-    "@testing-library/react": "npm:^14.0.0"
-    "@testing-library/user-event": "npm:^14.0.0"
-    "@types/react-dom": "npm:^18"
-    msw: "npm:^1.0.0"
-    react: "npm:^16.13.1 || ^17.0.0 || ^18.0.0"
-    react-dom: "npm:^18.3.1"
-    react-router-dom: "npm:^6.28.0"
-    react-use: "npm:^17.2.4"
-  peerDependencies:
-    react: ^16.13.1 || ^17.0.0 || ^18.0.0
-  languageName: unknown
-  linkType: soft
-
-"@liatrio/backstage-plugin-autogov@workspace:.":
-  version: 0.0.0-use.local
-  resolution: "@liatrio/backstage-plugin-autogov@workspace:."
-  dependencies:
-    "@backstage/cli": "npm:^0.27.1"
     "@semantic-release/changelog": "npm:^6.0.3"
     "@semantic-release/commit-analyzer": "npm:^10.0.4"
     "@semantic-release/git": "npm:^10.0.1"
     "@semantic-release/github": "npm:^9.2.6"
     "@semantic-release/npm": "npm:^11.0.3"
     "@semantic-release/release-notes-generator": "npm:^12.1.0"
+    "@testing-library/jest-dom": "npm:^6.0.0"
+    "@testing-library/react": "npm:^14.0.0"
+    "@testing-library/user-event": "npm:^14.0.0"
+    "@types/react-dom": "npm:^18"
     conventional-changelog-conventionalcommits: "npm:^8.0.0"
     husky: "npm:^9.1.6"
     lerna: "npm:^8.1.9"
+    msw: "npm:^1.0.0"
+    react: "npm:^16.13.1 || ^17.0.0 || ^18.0.0"
+    react-dom: "npm:^18.3.1"
+    react-router-dom: "npm:^6.28.0"
+    react-use: "npm:^17.2.4"
     typescript: "npm:^5.6.3"
+  peerDependencies:
+    react: ^16.13.1 || ^17.0.0 || ^18.0.0
   languageName: unknown
   linkType: soft
 
